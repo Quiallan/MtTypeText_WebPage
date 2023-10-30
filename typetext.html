@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personalized Notepad Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-column">
+      <div class="form-container">
+        <h2>Get Your Personalized Notepad</h2>
+        <form action="submit-form.php" method="post">
+          <div class="name-container">
+            <div class="field">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="field">
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="field">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+          </div>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <div class="notepad-column">
+      <img src="https://marketingtechonline.com/wp-content/uploads/2023/08/Mtech_40023_Stationery_Buffalove-Notepad_FINAL_no-Name-1583x2048.png" alt="Notepad" class="notepad-image">
+      <div id="dynamic-name">
+        <span id="first-name-display">First</span>
+        <span id="last-name-display">LastName</span>
+      </div>
+    </div>
+  </div>
+  <p> <a href=https://marketingtechonline.com/free-personal-notepad/">See in action here</a> </p>
+  <script src="script.js"></script>
+</body>
+</html>
