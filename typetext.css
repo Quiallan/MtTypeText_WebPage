@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.form-column, .notepad-column {
+  flex: 1;
+  width: 50%;
+}
+
+.form-column {
+  padding: 40px;
+  background-color: tan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid black;
+}
+
+.form-container {
+  max-width: 400px;
+}
+
+.name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.name-container .field {
+  width: calc(50% - 5px);
+  margin-right: 10px;
+}
+
+.name-container .field:last-child {
+  margin-right: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+}
+
+.notepad-column {
+  flex: 1;
+  padding: 20px;
+  background-color: tan;
+  position: relative; /* This ensures child elements with absolute positioning are relative to this element. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notepad-image {
+  max-width: 90%;
+  max-height: 60%;
+  border: 2px solid black;
+}
+
+#dynamic-name {
+  position: absolute;
+  bottom: 165px;
+  right: 120px;
+  font-size: 25px;
+}
+
+#first-name-display {
+  font-weight: 300;
+  color: navy;
+}
+
+#last-name-display {
+  font-weight: 600;
+  color: navy;
+}
+
+input[type="submit"] {
+  background-color: tan;
+  border: 2px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Responsive styling for screens less than or equal to 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-column, .notepad-column {
+    width: 100%;
+  }
+
+  .form-column {
+    border-right: none;
+    border-bottom: 2px solid black;
+  }
+
+  .name-container .field {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #dynamic-name {
+    /* Adjust positioning and font size for mobile. */
+    bottom: 8%; /* Example value, adjust as needed */
+    right: 10%; /* Example value, adjust as needed */
+    font-size: 20px; 
+  }
+}
